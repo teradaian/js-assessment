@@ -16,11 +16,27 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-
+    // arr.forEach((i, idx) => {
+    //   if (i === item) {
+    //     arr.splice(idx, 1)
+    //   }
+    // })
+    // return arr
+    var i;
+    var len;
+    for (i = 0, len = arr.length; i < len; i++) {
+      if (arr[i] === item) {
+        arr.splice(i, 1);
+        i--;
+        len--;
+      }
+    }
+    return arr;
   },
 
   append: function(arr, item) {
-
+    arr.push(item)
+    return arr
   },
 
   truncate: function(arr) {
