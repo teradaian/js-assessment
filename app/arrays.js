@@ -12,7 +12,7 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-
+    return arr.filter(i => i !== item)
   },
 
   removeWithoutCopy: function(arr, item) {
